@@ -157,10 +157,10 @@ namespace NAudio.CoreAudioApi
             uint hardwareSupp;
 
             audioEndPointVolume = realEndpointVolume;
-            channels = new AudioEndpointVolumeChannels(audioEndPointVolume);
-            stepInformation = new AudioEndpointVolumeStepInformation(audioEndPointVolume);
-            Marshal.ThrowExceptionForHR(audioEndPointVolume.QueryHardwareSupport(out hardwareSupp));
-            hardwareSupport = (EEndpointHardwareSupport) hardwareSupp;
+            //channels = new AudioEndpointVolumeChannels(audioEndPointVolume);
+            //stepInformation = new AudioEndpointVolumeStepInformation(audioEndPointVolume);
+            //Marshal.ThrowExceptionForHR(audioEndPointVolume.QueryHardwareSupport(out hardwareSupp));
+            //hardwareSupport = (EEndpointHardwareSupport) hardwareSupp;
             volumeRange = new AudioEndpointVolumeVolumeRange(audioEndPointVolume);
             callBack = new AudioEndpointVolumeCallback(this);
             Marshal.ThrowExceptionForHR(audioEndPointVolume.RegisterControlChangeNotify(callBack));
